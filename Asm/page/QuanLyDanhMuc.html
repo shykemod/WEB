@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome.js"></script>
+    <title>Quản Lý Thư Mục</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<nav class="navbar" style="background-color: #ee4d2d">
+    <div class="container-fluid m-0 p-2">
+        <div class="col-1 float-start pb-1">
+            <a class="navbar-brand"><img src="image/icon.png" class="img-fluid"></a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid p-3 m-0 text-bg-secondary bg-opacity-10 text-black">
+    <div class="mt-4 bg-white w-100">
+        <div class="row p-3 w-100 d-flex m-0 p-0 text-center">
+            <div class="col-2 m-0 p-0">
+                <nav class="text-secondary">Ảnh</nav>
+            </div>
+            <div class="col-2 m-0 p-0">
+                <nav class="text-secondary">Tên</nav>
+            </div>
+            <div class="col-2 m-0 p-0 ms-auto">
+                <nav class="text-secondary">Số lượng sản phẩm</nav>
+            </div>
+            <div class="col-2 m-0 p-0 ms-auto">
+                <nav class="text-secondary">Đường dẫn</nav>
+            </div>
+            <div class="col-2 m-0 p-0 ms-auto">
+                <nav class="text-secondary">Thông tin chi Tiết</nav>
+            </div>
+            <div class="col-2 m-0 p-0 ms-auto">
+                <nav class="text-secondary">Thao tác</nav>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4 bg-white w-100"><hr>
+        <div class="row p-3 w-100 d-flex m-0 p-0">
+            <div class="col-2 text-center">
+                <img src="image/menu1.png" class="m-0 p-0 img-thumbnail col-5">
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="m-0 p-0 text-center">Thời trang nam</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">3</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">./ThoiTrangNam</nav>
+            </div>
+            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xem thêm
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Sửa
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xóa
+                </button>
+            </div>
+        </div>
+        <hr>
+        <div class="row p-3 w-100 d-flex m-0 p-0">
+            <div class="col-2 text-center">
+                <img src="image/menu1.png" class="m-0 p-0 img-thumbnail col-5">
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="m-0 p-0 text-center">Thời trang nam</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">3</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">./ThoiTrangNam</nav>
+            </div>
+            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xem thêm
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Sửa
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xóa
+                </button>
+            </div>
+        </div><hr>
+        <div class="row p-3 w-100 d-flex m-0 p-0">
+            <div class="col-2 text-center">
+                <img src="image/menu1.png" class="m-0 p-0 img-thumbnail col-5">
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="m-0 p-0 text-center">Thời trang nam</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">3</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">./ThoiTrangNam</nav>
+            </div>
+            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xem thêm
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Sửa
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xóa
+                </button>
+            </div>
+        </div><hr>
+        <div class="row p-3 w-100 d-flex m-0 p-0">
+            <div class="col-2 text-center">
+                <img src="image/menu1.png" class="m-0 p-0 img-thumbnail col-5">
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="m-0 p-0 text-center">Thời trang nam</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">3</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">./ThoiTrangNam</nav>
+            </div>
+            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xem thêm
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Sửa
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xóa
+                </button>
+            </div>
+        </div><hr>
+        <div class="row p-3 w-100 d-flex m-0 p-0">
+            <div class="col-2 text-center">
+                <img src="image/menu1.png" class="m-0 p-0 img-thumbnail col-5">
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="m-0 p-0 text-center">Thời trang nam</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">3</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">./ThoiTrangNam</nav>
+            </div>
+            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xem thêm
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Sửa
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xóa
+                </button>
+            </div>
+        </div><hr>
+        <div class="row p-3 w-100 d-flex m-0 p-0">
+            <div class="col-2 text-center">
+                <img src="image/menu1.png" class="m-0 p-0 img-thumbnail col-5">
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="m-0 p-0 text-center">Thời trang nam</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">3</nav>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <nav class="fw-semibold pt-1">./ThoiTrangNam</nav>
+            </div>
+            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xem thêm
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Sửa
+                </button>
+            </div>
+            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Xóa
+                </button>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="mt-4 bg-white w-100">
+        <div class="row p-3 w-100 d-flex m-0 p-0">
+            <div
+                class="col-4 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <input type="file" class="form-control custom-file-input" id="customFile">
+                
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <input type="text" class="form-control" id="TenDanhMuc" placeholder="Tên danh mục" required>
+            </div>
+            <div
+                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <input type="text" class="form-control" id="validationTooltip01" placeholder="Đường dẫn" required>
+            </div>
+            <div class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
+                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    Thên danh mục
+                </button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="card text-center p-4 text-white" style="background-color: #ee4d2d">
+    <div class="card-body">
+        <h5 class="card-title">© Bản quyền thuộc về Nguyễn Lê Nhất Vũ</h5>
+        <p class="card-text">Số điện thoại: 0865805582 <br> Email: vunlnph32827@fpt.edu.vn</p>
+    </div>
+</div>
+
+
+</html>

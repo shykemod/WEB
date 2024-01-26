@@ -1,0 +1,69 @@
+
+<title>Đăng ký</title>
+
+<nav class="navbar">
+    <div class="container-fluid m-0">
+        <div class="col-2 float-start">
+            <a class="navbar-brand"><img src="image/Shopee-Logo-Vector.png" class="img-fluid"></a>
+
+        </div>
+        <div class="col-9 float-end text-end">
+            <a class="navbar-brand fw-semibold" style="color: #ee4d2d">Bạn cần giúp đỡ?</a>
+        </div>
+
+    </div>
+</nav>
+<div class="login-page" style="background-color: #ee4d2d">
+
+    <div class="w-100 d-flex justify-content-center p-5">
+        <div class="container row m-0 p-0">
+            <div class="col-12">
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="image/LoginPage.png" alt="">
+                        </div>
+                        <div class="col-5 pe-0 ms-5 bg-white shadow rounded">
+                            <div class="h-100 py-5 px-5">
+                                <h3 class="mb-3">Đăng Ký</h3>
+
+                                <form action="" class="row g-4">
+                                    <div class="col-12">
+                                        <div class="input-group mt-4">
+                                            <input type="text" class="form-control fs-4" placeholder="Tên đăng nhập"
+                                            ng-model="user.id">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="input-group mt-2">
+                                            <input type="password" class="form-control fs-4" placeholder="Mật khẩu" ng-model="user.password">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="input-group mt-2">
+                                            <input type="password" class="form-control fs-4"
+                                                placeholder="Xác nhận mật khẩu" ng-model="passwordAcp">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12 m-0 mt-5">
+                                        <button type="submit" ng-click="DangKy()"
+                                            class="btn btn-primary p-3 accordion-collapse w-100 fw-semibold fs-5"
+                                            style="background-color: #ee4d2d; border: #ee4d2d;">ĐĂNG KÝ</button>
+                                    </div>
+                                    <div class="col-sm-12 m-0 mt-2">
+                                        <p class="text-center text-secondary m-0 mt-3 fw-semibold">Bạn đã có tài khoản?
+                                            <a href="#!../dangnhap"  style="color: #ee4d2d">Đăng nhập</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

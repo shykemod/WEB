@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome.js"></script>
+    <title>Trang chủ</title>
+    <style>
+        .menu {
+            border: 1px solid #efefef;
+        }
+
+        .menu:hover {
+            border: 1px solid #6b6b6b;
+            scale: 1.05;
+        }
+    </style>
+</head>
+
+<nav class="navbar" style="background-color: #ee4d2d">
+    <div class="container-fluid m-0 p-2">
+        <div class="col-1 float-start pb-1">
+            <a class="navbar-brand"><img src="image/icon.png" class="img-fluid"></a>
+        </div>
+        <div class="col-6">
+            <form class="form-inline d-flex">
+                <input class="form-control mr-sm-2 rounded-end-0 border-0" type="text"
+                    placeholder="Shopee bao ship 0đ - Đăng ký ngay" aria-label="Search">
+                <div class="p-1 bg-white rounded-2 rounded-start-0">
+                    <button class="btn my-2 my-sm-0 ps-3 pe-3" type="submit" style="background-color: #ee4d2d">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-1 float-end text-end">
+            <button class="btn position-relative me-3">
+                <i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i>
+                <span class="badge badge-pill bg-danger position-absolute">99+</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid p-3 m-0 text-bg-secondary bg-opacity-10 text-black">
+    <div class="mt-4 bg-white">
+        <div class="w-100 d-flex">
+            <p class="p-0 ms-3 pt-3 fs-5 fw-semibold text-secondary">Sắp xếp theo</p>
+            <button class="btn btn-dark m-2 ms-4 ps-5 pe-5 rounded-0 border-0 fw-semibold" style="background-color: #ee4d2d;">Phổ Biến</button>
+            <button class="btn m-2 ms-2 ps-5 pe-5 rounded-0 fw-semibold" style="border-color: #ee4d2d; color: #ee4d2d;">Mới Nhất</button>
+            <button class="btn m-2 ms-2 ps-5 pe-5 rounded-0 fw-semibold" style="border-color: #ee4d2d; color: #ee4d2d;">Bán Chạy</button>
+            
+        </div>
+        <div class="row p-3">
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a><a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+            <a class="menu col-2 text-dark text-decoration-none" href="#">
+                <img src="image/BanChay1.png" class="w-100">
+                <p class="fw-semibold m-2 p-0 mh-100">Serum chăm sóc da mặt tại nhà</p>
+                <div class="w-100">
+                    <nav class="float-start pb-2" style="color: #ee4d2d;">99.000đ</nav>
+                    <nav class="float-end text-secondary">Đã bán 12.5k</nav>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+<div class="card text-center p-4 text-white" style="background-color: #ee4d2d">
+    <div class="card-body">
+        <h5 class="card-title">© Bản quyền thuộc về Nguyễn Lê Nhất Vũ</h5>
+        <p class="card-text">Số điện thoại: 0865805582 <br> Email: vunlnph32827@fpt.edu.vn</p>
+    </div>
+</div>
+
+</html>

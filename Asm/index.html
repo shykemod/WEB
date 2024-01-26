@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/all.css">
+    <link rel="stylesheet" href="lib/style.css">
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/angular.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="lib/font-fontawesome.js"></script>
+    <script src="Js/app.js"></script>
+    <script src="Js/Controller.js"></script>
+</head>
+
+<body ng-app="myApp" class="position-relative">
+    <div ng-view>
+
+    </div>
+    <div class="toast text-white" id="ThongBao" style="position: absolute; top: 10px; right: 10px;">
+        <div class="toast-body fw-bold fs-6" id="Message">
+        </div>
+    </div>
+</body>
+
+
+<footer class="card text-center p-4 rounded-0">
+    <div class="card-body">
+        <h5 class="card-title">© Bản quyền thuộc về Nguyễn Lê Nhất Vũ</h5>
+        <p class="card-text">Số điện thoại: 0865805582 <br> Email: vunlnph32827@fpt.edu.vn</p>
+    </div>
+</footer>
+
+</html>
