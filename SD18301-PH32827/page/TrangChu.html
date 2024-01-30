@@ -1,0 +1,24 @@
+<h1>Danh sách phòng</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th scope="col" class="bg-primary text-white">ID</th>
+                <th scope="col" class="bg-primary text-white">Tên</th>
+                <th scope="col" class="bg-primary text-white">Loại</th>
+                <th scope="col" class="bg-primary text-white">Số Lượng</th>
+                <th scope="col" class="bg-primary text-white">Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in danhsachphong" ng-if="item.soLuong > 0">
+                <td scope="row">{{item.id}}</td>
+                <td>{{item.ten}}</td>
+                <td>{{item.loai}}</td>
+                <td>{{item.soLuong}}</td>
+                <td><a href="#!dat-phong/{{item.id}}"><button class="btn btn-outline-primary">Đặt Phòng</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,46 @@
+{
+    "Phong": [
+        {
+            "id": 1,
+            "ten": "Phòng A",
+            "loai": "Phòng đơn",
+            "soLuong": 2
+        },
+        {
+            "id": 2,
+            "ten": "Phòng B",
+            "loai": "Phòng đôi",
+            "soLuong": 15
+        },
+        {
+            "id": 3,
+            "ten": "Phòng C",
+            "loai": "Phòng đôi",
+            "soLuong": 1
+        },
+        {
+            "id": 4,
+            "ten": "Phòng D",
+            "loai": "Phòng đơn",
+            "soLuong": 7
+        }
+    ],
+    "DatPhong": [
+        {
+            "id": 1,
+            "tenKhach": "Nguyen Van A",
+            "sodienthoai": "0123456789",
+            "ngayDat": "28/01/2024",
+            "idPhong": 1,
+            "soLuong": 2
+        },
+        {
+            "id": 2,
+            "tenKhach": "Tran Thi B",
+            "sodienthoai": "0987654321",
+            "ngayDat": "29/01/2024",
+            "idPhong": 2,
+            "soLuong": 1
+        }
+    ]
+}

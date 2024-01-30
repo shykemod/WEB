@@ -6,9 +6,9 @@ function sleep(ms) {
 async function alertMessage(message, type) {
     var ThongBaoElement = document.querySelector('#ThongBao');
     var Message = document.getElementById('Message');
-    if (type != 'success') 
+    if (type != 'success')
         Message.classList.remove("bg-success");
-    else 
+    else
         Message.classList.remove("bg-danger");
     var toast = new bootstrap.Toast(ThongBaoElement);
     if (type == 'success') {
@@ -21,4 +21,16 @@ async function alertMessage(message, type) {
     }
 
     toast.show();
+}
+
+function formatPrice(price) {
+    return price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+}
+
+function formatCount(count) {
+    if (count < 1000) {
+        return count.toString(); 
+    } else {
+        return (count / 1000).toFixed(2) + 'k'; 
+    }
 }

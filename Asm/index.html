@@ -15,15 +15,58 @@
     <script src="Js/Controller.js"></script>
 </head>
 
+<nav class="navbar" style="background-color: #ee4d2d" ng-if="isPage1()">
+    <div class="container-fluid m-0 p-2">
+        <div class="col-1 float-start pb-1">
+            <a class="navbar-brand" href="#!trangchu"><img src="image/icon.png" class="img-fluid"></a>
+        </div>
+        <div class="col-6" ng-if="isPage2()">
+            <form class="form-inline d-flex">
+                <input class="form-control mr-sm-2 rounded-end-0 border-0" type="text" ng-model="valueSearch"
+                    placeholder="Shopee bao ship 0đ - Đăng ký ngay">
+                <div class="p-1 bg-white rounded-2 rounded-start-0">
+                    <button class="btn my-2 my-sm-0 ps-3 pe-3" style="background-color: #ee4d2d"
+                        ng-click="search(valueSearch)">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-1 float-end text-end d-flex justify-content-end" ng-if="isPage2()">
+            <a href="#!giohang" class=" m-2 mt-auto mb-auto ">
+                <button class="btn position-relative">
+                    <i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i>
+                </button>
+            </a>
+            <div class="nav-item dropdown m-2 mt-auto mb-auto text-white">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-user fa-xl"></i>
+                </a>
+                <ul class="dropdown-menu  dropdown-menu-end">
+                    <li><nav class="ps-3">ID: {{UserId}}
+                        <i class="fa-solid fa-crown"  ng-if="Role === '1'" style="color: #FFD43B;"></i>
+                    </nav></li>
+                    <li><a class="dropdown-item" href="#!qldanhmuc" ng-if="Role === '1'">Quản lý danh mục</a></li>
+                    <li><a class="dropdown-item" href="#!qlsanpham" ng-if="Role === '1'">Quản lý sản phẩm</a></li>
+                    <li><a class="dropdown-item" href="#!qldonhang" ng-if="Role === '1'">Quản lý đơn hàng</a></li>
+                    <li><a class="dropdown-item" ng-click="LogOut()">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
 <body ng-app="myApp" class="position-relative">
     <div ng-view>
 
     </div>
-    <div class="toast text-white" id="ThongBao" style="position: absolute; top: 10px; right: 10px;">
-        <div class="toast-body fw-bold fs-6" id="Message">
+    <div class="toast text-white bg-transparent border-0" id="ThongBao" style="position: absolute; top: 100px; right: 10px;">
+        <div class="toast-body fw-bold fs-6 rounded-3" id="Message">
         </div>
     </div>
 </body>
+
 
 
 <footer class="card text-center p-4 rounded-0">

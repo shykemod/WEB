@@ -1,0 +1,64 @@
+<h1>Quản Lý Phòng</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th scope="col" class="bg-primary text-white">ID</th>
+                <th scope="col" class="bg-primary text-white">Tên</th>
+                <th scope="col" class="bg-primary text-white">Loại</th>
+                <th scope="col" class="bg-primary text-white">Số Lượng</th>
+                <th scope="col" class="bg-primary text-white">Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in danhsachphong" ng-if="item.soLuong > 0">
+                <td scope="row">{{item.id}}</td>
+                <td>{{item.ten}}</td>
+                <td>{{item.loai}}</td>
+                <td>{{item.soLuong}}</td>
+                <td><button class="btn btn-danger">Xóa Phòng</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex">
+        <div class="w-50 border p-3 rounded-3">
+            <label for="name">Tên phòng</label>
+            <input id="name" class="form-control" type="text" ng-model="phong.ten">
+            <div class="mb-3">
+                <label for="loai">Loại</label>
+                <select class="form-select form-select-lg" name="loai" ng-model="phong.loai">
+                    <option value="">-- Loại Phòng --</option>
+                    <option value="Phòng đơn">Phòng Đơn</option>
+                    <option value="Phòng đôi">Phòng Đôi</option>
+                </select>
+            </div>
+    
+            <label for="soLuong">Số lượng phòng</label>
+            <input id="soLuong" class="form-control" type="number" ng-model="phong.soLuong" onkeydown="return false" min="1"
+                max="{{phong.soLuong}}">
+            <button class="btn btn-primary mt-3" ng-click="DatPhong()">Thêm Phòng</button>
+        </div>
+        <div class="w-50 border p-3 rounded-3">
+            <label for="name">Id phòng</label>
+            <input id="name" class="form-control" type="text" ng-model="phong.ten">
+            <label for="name">Tên phòng</label>
+            <input id="name" class="form-control" type="text" ng-model="phong.ten">
+            <div class="mb-3">
+                <label for="loai">Loại</label>
+                <select class="form-select form-select-lg" name="loai" ng-model="phong.loai">
+                    <option value="">-- Loại Phòng --</option>
+                    <option value="Phòng đơn">Phòng Đơn</option>
+                    <option value="Phòng đôi">Phòng Đôi</option>
+                </select>
+            </div>
+    
+            <label for="soLuong">Số lượng phòng</label>
+            <input id="soLuong" class="form-control" type="number" ng-model="phong.soLuong" onkeydown="return false" min="1"
+                max="{{phong.soLuong}}">
+            <button class="btn btn-primary mt-3" ng-click="DatPhong()">Sửa Phòng</button>
+        </div>
+    </div>
+    
+</div>

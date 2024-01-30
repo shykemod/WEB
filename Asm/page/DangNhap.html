@@ -13,7 +13,7 @@
 </nav>
 
 <div class="login-page" style="background-color: #ee4d2d">
-    
+
     <div class="w-100 d-flex justify-content-center p-5">
         <div class="container row m-0 p-0">
             <div class="col-12">
@@ -25,7 +25,6 @@
                         <div class="col-5 pe-0 ms-5 bg-white shadow rounded pt-5">
                             <div class="h-100 py-5 px-5">
                                 <h3 class="mb-3">Đăng nhập </h3>
-
                                 <form action="" class="row g-4">
                                     <div class="col-12">
                                         <div class="input-group mt-4">
@@ -39,26 +38,21 @@
                                                 ng-model="account.password">
                                         </div>
                                     </div>
-
-
+                                    <div class="row mt-0">
+                                        <div class="col-12 m-0 mt-5">
+                                            <button class="btn btn-primary p-3 accordion-collapse w-100 fw-semibold fs-5"
+                                                style="background-color: #ee4d2d; border: #ee4d2d;"
+                                                ng-click="DangNhap()">ĐĂNG NHẬP</button>
+                                        </div>
+                                        <div class="col-sm-12 m-0 mt-2">
+                                            <p class="text-center text-secondary m-0 mt-3 fw-semibold">Bạn không có tài
+                                                khoản?
+                                                <a href="#!../dangky" style="color: #ee4d2d">Đăng ký ngay</a>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </form>
-                                <div class="row mt-0">
-                                    <div class="col-12 m-0 mt-5">
-                                        <button class="btn btn-primary p-3 accordion-collapse w-100 fw-semibold fs-5"
-                                            style="background-color: #ee4d2d; border: #ee4d2d;"
-                                            ng-click="DangNhap()">ĐĂNG NHẬP</button>
-                                    </div>
-
-                                    <div class="col-sm-12 m-0 mt-2 ">
-                                        <a href="#" class="float-end text-primary m-0">Quên mật khẩu?</a>
-                                    </div>
-                                    <div class="col-sm-12 m-0 mt-2">
-                                        <p class="text-center text-secondary m-0 mt-3 fw-semibold">Bạn không có tài
-                                            khoản?
-                                            <a href="#!../dangky" style="color: #ee4d2d">Đăng ký ngay</a>
-                                        </p>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
