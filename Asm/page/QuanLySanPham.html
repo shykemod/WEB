@@ -1,203 +1,153 @@
-
+<title>Quản lý sản phẩm</title>
 <div class="container-fluid p-3 m-0 text-bg-secondary bg-opacity-10 text-black">
-    <div class="mt-4 bg-white w-100">
-        <div class="row p-3 w-100 d-flex m-0 p-0 text-center">
-            <div class="col-2 m-0 p-0">
-                <nav class="text-secondary">Ảnh</nav>
-            </div>
-            <div class="col-2 m-0 p-0">
-                <nav class="text-secondary">Tên</nav>
-            </div>
-            <div class="col-2 m-0 p-0 ms-auto">
-                <nav class="text-secondary">Số lượng sản phẩm có sẵn</nav>
-            </div>
-            <div class="col-2 m-0 p-0 ms-auto">
-                <nav class="text-secondary">Đường dẫn</nav>
-            </div>
-            <div class="col-2 m-0 p-0 ms-auto">
-                <nav class="text-secondary">Thông tin chi tiết</nav>
-            </div>
-            <div class="col-2 m-0 p-0 ms-auto">
-                <nav class="text-secondary">Thao tác</nav>
-            </div>
+    <div class="mt-4 bg-white w-100 d-flex justify-content-between p-3 border">
+        <div class="input-group flex-nowrap w-25">
+            <span class="input-group-text" id="addon-wrapping">Bộ lọc</span>
+            <input type="text" class="form-control" aria-describedby="addon-wrapping" ng-model="searchText">
         </div>
+        <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;"
+            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Thêm sản phẩm
+        </button>
     </div>
-    <div class="mt-4 bg-white w-100">
-        <hr>
-        <div class="row p-3 w-100 d-flex m-0 p-0">
-            <div class="col-2 text-center">
-                <img src="image/ChiTietSanPham1/Mau1.jpg" class="m-0 p-0 img-thumbnail col-5">
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="m-0 p-0 text-center">Tên</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">3</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">./sanpham1</nav>
-            </div>
-            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xem thêm
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Sửa
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xóa
-                </button>
-            </div>
-        </div>
-        <hr>
-        <div class="row p-3 w-100 d-flex m-0 p-0">
-            <div class="col-2 text-center">
-                <img src="image/ChiTietSanPham1/Mau1.jpg" class="m-0 p-0 img-thumbnail col-5">
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="m-0 p-0 text-center">Tên</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">3</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">./sanpham2</nav>
-            </div>
-            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xem thêm
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Sửa
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xóa
-                </button>
-            </div>
-        </div>
-        <hr>
-        <div class="row p-3 w-100 d-flex m-0 p-0">
-            <div class="col-2 text-center">
-                <img src="image/ChiTietSanPham1/Mau1.jpg" class="m-0 p-0 img-thumbnail col-5">
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="m-0 p-0 text-center">Tên</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">3</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">./sanpham3</nav>
-            </div>
-            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xem thêm
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Sửa
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xóa
-                </button>
-            </div>
-        </div>
-        <hr>
-        <div class="row p-3 w-100 d-flex m-0 p-0">
-            <div class="col-2 text-center">
-                <img src="image/ChiTietSanPham1/Mau1.jpg" class="m-0 p-0 img-thumbnail col-5">
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="m-0 p-0 text-center">Tên</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">3</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">./sanpham4</nav>
-            </div>
-            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xem thêm
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Sửa
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xóa
-                </button>
-            </div>
-        </div>
-        <hr>
-        <div class="row p-3 w-100 d-flex m-0 p-0">
-            <div class="col-2 text-center">
-                <img src="image/ChiTietSanPham1/Mau1.jpg" class="m-0 p-0 img-thumbnail col-5">
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="m-0 p-0 text-center">Tên</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">3</nav>
-            </div>
-            <div
-                class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <nav class="fw-semibold pt-1">./sanpham5</nav>
-            </div>
-            <div class="col-2 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xem thêm
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Sửa
-                </button>
-            </div>
-            <div class="col-1 text-center m-0 p-0 pt-4 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Xóa
-                </button>
-            </div>
-        </div>
-        <hr>
+    <div class="text-center m-0 p-0 mt-2 bg-white">
+        <table class="table table-white table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ảnh</th>
+                    <th>Tên</th>
+                    <th>Giá bán</th>
+                    <th>Số lượng còn lại</th>
+                    <th>Số lượng đã bán</th>
+                    <th>Danh mục</th>
+                    <th>Ngày đăng</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="item in ListSanPham | filter:searchText">
+                <tr>
+                    <th>{{item.id}}</th>
+                    <th><img src="{{item.img}}" width="25%"></th>
+                    <td>{{item.name}}</td>
+                    <td>{{formatPrice(item.price)}}</td>
+                    <td>{{item.count}}</td>
+                    <td>{{item.soldCount}}</td>
+                    <td>{{item.danhmuc}}</td>
+                    <td>{{item.datePosted}}</td>
+                    <td>
+                        <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" data-bs-toggle="modal" data-bs-target="#SuaBackdrop" ng-click="ViewSua(item)"
+                            style="background-color: #ee4d2d;">
+                            Sửa
+                        </button>
+                        <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" ng-click="Xoa(item.id)"
+                            style="background-color: #ee4d2d;">
+                            Xóa
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="mt-4 bg-white w-100">
-        <div class="row p-3 w-100 d-flex m-0 p-0">
-            <div class="col-2 text-center m-0 p-0 ms-auto d-flex flex-column justify-content-center align-content-center">
-                <button class="btn rounded-0 p-1 ps-5 pe-5 text-white fw-semibold" style="background-color: #ee4d2d;">
-                    Thên sản phẩm
-                </button>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Thêm sản phẩm</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label class="text-start">Tên sản phẩm</label>
+                        <input type="text" class="form-control" placeholder="ví dụ: Áo sơ mi" ng-model="NewSP.name"
+                            required>
+                    </div>
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label class="text-start">Giá</label>
+                        <input type="number" class="form-control" placeholder="ví dụ: 100000 (đơn vị vnđ)"
+                            ng-model="NewSP.price" required>
+                    </div>
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label class="text-start">Số lượng</label>
+                        <input type="number" class="form-control" placeholder="ví dụ: 100" ng-model="NewSP.count"
+                            required>
+                    </div>
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label class="text-start">Danh mục</label>
+                        <select class="form-select" ng-model="NewSP.danhmuc">
+                            <option selected value="">- Lựa chọn danh mục -</option>
+                            <option ng-repeat="danhmuc in dsDanhmuc" value="{{danhmuc.id}}">{{danhmuc.id}}</option>
+                        </select>
+                    </div>
+
+
+                    <div class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center">
+                        <label for="AnhSp" class="text-start">Ảnh sản phẩm</label>
+                        <input type="file" class="form-control custom-file-input" id="AnhSp" ng-model="ImgFile">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" ng-click="Them()">Thêm</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="SuaBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="SuaBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="SuaBackdropLabel">Sửa sản phẩm</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label class="text-start">Tên sản phẩm</label>
+                        <input type="text" class="form-control" placeholder="ví dụ: Áo sơ mi" ng-model="ObjSp.name"
+                            required>
+                    </div>
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label class="text-start">Giá</label>
+                        <input type="number" class="form-control" placeholder="ví dụ: 100000 (đơn vị vnđ)"
+                            ng-model="ObjSp.price" required>
+                    </div>
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label class="text-start">Số lượng</label>
+                        <input type="number" class="form-control" placeholder="ví dụ: 100" ng-model="ObjSp.count"
+                            required>
+                    </div>
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label class="text-start">Danh mục</label>
+                        <select class="form-select" ng-model="ObjSp.danhmuc">
+                            <option selected value="">- Lựa chọn danh mục -</option>
+                            <option ng-repeat="danhmuc in dsDanhmuc" value="{{danhmuc.id}}">{{danhmuc.id}}</option>
+                        </select>
+                    </div>
+
+
+                    <div class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center">
+                        <label for="AnhSp" class="text-start">Ảnh sản phẩm</label>
+                        <input type="file" class="form-control custom-file-input" id="AnhSp2" ng-model="ImgFile2">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" ng-click="Sua()">Sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
