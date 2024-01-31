@@ -33,13 +33,13 @@
             </form>
         </div>
         <div class="col-1 float-end text-end d-flex justify-content-end" ng-if="isPage2()">
-            <a href="#!giohang" class=" m-2 mt-auto mb-auto ">
+            <a href="#!giohang" class=" m-2 mt-auto mb-auto "  ng-if="Role === '0'" >
                 <button class="btn position-relative">
                     <i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i>
                 </button>
             </a>
             <div class="nav-item dropdown m-2 mt-auto mb-auto text-white">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" role="button"  data-bs-toggle="dropdown" 
                     aria-expanded="false">
                     <i class="fa-solid fa-user fa-xl"></i>
                 </a>

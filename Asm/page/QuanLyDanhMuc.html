@@ -25,16 +25,18 @@
                     <div
                         class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
                         <label for="anh" class="text-start">Đường Dẫn</label>
-                        <input type="text" class="form-control" placeholder="ví dụ: ThoiTrangNam" required>
+                        <input type="text" class="form-control" placeholder="ví dụ: ThoiTrangNam"
+                            ng-model="NewDanhMuc.id" required>
                     </div>
                     <div
                         class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
                         <label for="anh" class="text-start">Tên danh mục</label>
-                        <input type="text" class="form-control" id="TenDanhMuc" placeholder="ví dụ: Thời trang nam" required>
+                        <input type="text" class="form-control" id="TenDanhMuc" placeholder="ví dụ: Thời trang nam"
+                            ng-model="NewDanhMuc.name" required>
                     </div>
                     <div class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center">
-                        <label for="anh" class="text-start">Ảnh danh mục</label>
-                        <input type="file" class="form-control custom-file-input" id="customFile" name="anh" ng-model="">
+                        <label for="AnhDanhMuc" class="text-start">Ảnh danh mục</label>
+                        <input type="file" class="form-control custom-file-input" id="AnhDanhMuc" ng-model="ImgFile">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -59,14 +61,13 @@
                 <nav class="text-secondary">Đường dẫn</nav>
             </div>
             <div class="col-2 m-0 p-0 ms-auto">
-                <nav class="text-secondary">Thông tin chi Tiết</nav>
+                <nav class="text-secondary">Sản phẩm</nav>
             </div>
             <div class="col-2 m-0 p-0 ms-auto">
                 <nav class="text-secondary">Thao tác</nav>
             </div>
         </div>
     </div>
-
     <div class="mt-4 bg-white w-100">
         <div ng-repeat="item in danhmuc">
             <div class="row p-3 w-100 d-flex m-0 p-0">
@@ -94,8 +95,17 @@
                     </button>
                 </div>
                 <div
-                    class="col-2 text-center m-0 p-0 pt-3 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
-                    <button class="btn rounded-0 p-1 text-white fw-semibold" style="background-color: #ee4d2d;">
+                    class="col-1 text-center m-0 p-0 pt-3 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                    <button class="btn rounded-0 p-1 text-white fw-semibold" style="background-color: #ee4d2d;"
+                        data-bs-toggle="modal" data-bs-target="#SuaBackdrop" ng-click="ViewSua(item)">
+                        Sửa
+                    </button>
+                </div>
+
+                <div
+                    class="col-1 text-center m-0 p-0 pt-3 d-flex flex-column justify-content-center align-content-center ps-1 pe-1">
+                    <button class="btn rounded-0 p-1 text-white fw-semibold" style="background-color: #ee4d2d;"
+                        ng-click="Xoa(item.id)">
                         Xóa
                     </button>
                 </div>
@@ -104,5 +114,38 @@
         </div>
     </div>
 
+    <div class="modal fade" id="SuaBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="SuaBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="SuaBackdropLabel">Sửa sản phẩm</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label for="anh" class="text-start">Đường Dẫn</label>
+                        <input type="text" class="form-control" placeholder="ví dụ: ThoiTrangNam"
+                            ng-model="ObjDanhMuc.id" required>
+                    </div>
+                    <div
+                        class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center align-content-center">
+                        <label for="anh" class="text-start">Tên danh mục</label>
+                        <input type="text" class="form-control" id="TenDanhMuc" placeholder="ví dụ: Thời trang nam"
+                            ng-model="ObjDanhMuc.name" required>
+                    </div>
+                    <div class="text-center m-0 p-0 mt-2 d-flex flex-column justify-content-center">
+                        <label for="AnhDanhMuc" class="text-start">Ảnh danh mục</label>
+                        <input type="file" class="form-control custom-file-input" id="AnhDanhMuc2" ng-model="ImgFile2">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" ng-click="Sua()">Sửa</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
