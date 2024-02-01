@@ -21,6 +21,22 @@ myApp.controller('qlsanphamCtrl', function ($scope, $rootScope, $http) {
         datePosted: "",
         danhmuc: ""
     }
+
+    $scope.sortColumn = 'id';
+    $scope.reverseSort = false;
+
+    $scope.sortData = function (column) {
+        $scope.reverseSort = ($scope.sortColumn == column) ? !$scope.reverseSort : false;
+        $scope.sortColumn = column;
+    };
+
+    $scope.getSortClass = function (column) {
+        if ($scope.sortColumn == column) {
+            return $scope.reverseSort ? 'fa fa-arrow-down' : 'fa fa-arrow-up';
+        }
+        return '';
+    };
+
     $scope.Load = function () {
         $http.get("http://localhost:3000/sanpham").then(function (response) {
             $scope.ListSanPham = response.data;

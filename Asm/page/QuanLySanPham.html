@@ -14,18 +14,30 @@
         <table class="table table-white table-bordered">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th ng-click="sortData('id')">
+                        ID <i ng-class="getSortClass('id')"></i>
+                    </th>
                     <th>Ảnh</th>
                     <th>Tên</th>
-                    <th>Giá bán</th>
-                    <th>Số lượng còn lại</th>
-                    <th>Số lượng đã bán</th>
-                    <th>Danh mục</th>
-                    <th>Ngày đăng</th>
+                    <th ng-click="sortData('price')">
+                        Giá bán  <i ng-class="getSortClass('price')"></i>
+                    </th>
+                    <th ng-click="sortData('count')">
+                        Số lượng còn lại <i ng-class="getSortClass('count')"></i>
+                    </th>
+                    <th ng-click="sortData('soldCount')">
+                        Số lượng đã bán  <i ng-class="getSortClass('soldCount')"></i>
+                    </th>
+                    <th ng-click="sortData('danhmuc')">
+                        Danh mục  <i ng-class="getSortClass('danhmuc')"></i>
+                    </th>
+                    <th ng-click="sortData('datePosted')">
+                        Ngày đăng  <i ng-class="getSortClass('datePosted')"></i>
+                    </th>
                     <th>Hành động</th>
                 </tr>
             </thead>
-            <tbody ng-repeat="item in ListSanPham | filter:searchText">
+            <tbody ng-repeat="item in ListSanPham | filter:searchText | orderBy:sortColumn:reverseSort">
                 <tr>
                     <th>{{item.id}}</th>
                     <th><img src="{{item.img}}" width="25%"></th>
