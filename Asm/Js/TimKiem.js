@@ -32,7 +32,7 @@ myApp.controller('TimKiemCtrl', function ($scope, $http, $rootScope, $routeParam
             $scope.giaClicked = !$scope.giaClicked;
             if ($scope.giaClicked) {
                 $scope.giaClickedText = "Giá tăng dần";
-                $http.get("http://localhost:3000/sanpham?_sort=price&danhmuc=" + $scope.danhMuc).then(function (response) {
+                $http.get("http://localhost:3000/sanpham?_sort=price&q=" + $scope.id).then(function (response) {
                     $scope.sptimkiem = response.data;
                     $scope.sptimkiem.forEach(element => {
                         element.price = $rootScope.formatPrice(element.price);
@@ -43,7 +43,7 @@ myApp.controller('TimKiemCtrl', function ($scope, $http, $rootScope, $routeParam
                 });
             } else {
                 $scope.giaClickedText = "Giá giảm dần";
-                $http.get("http://localhost:3000/sanpham?_sort=price&_order=desc&danhmuc=" + $scope.danhMuc).then(function (response) {
+                $http.get("http://localhost:3000/sanpham?_sort=price&_order=desc&q=" + $scope.id).then(function (response) {
                     $scope.sptimkiem = response.data;
                     $scope.sptimkiem.forEach(element => {
                         element.price = $rootScope.formatPrice(element.price);
@@ -58,7 +58,7 @@ myApp.controller('TimKiemCtrl', function ($scope, $http, $rootScope, $routeParam
             $scope.giaClickedText = "Giá tăng dần";
         }
         if (button === 'Huy') {
-            $http.get("http://localhost:3000/sanpham?danhmuc=" + $scope.danhMuc).then(function (response) {
+            $http.get("http://localhost:3000/sanpham?q=" + $scope.id).then(function (response) {
                 $scope.sptimkiem = response.data;
                 $scope.sptimkiem.forEach(element => {
                     element.price = $rootScope.formatPrice(element.price);
@@ -69,7 +69,7 @@ myApp.controller('TimKiemCtrl', function ($scope, $http, $rootScope, $routeParam
             });
         }
         if (button === 'moiNhat') {
-            $http.get("http://localhost:3000/sanpham?_limit=18&_sort=datePosted&danhmuc=" + $scope.danhMuc).then(function (response) {
+            $http.get("http://localhost:3000/sanpham?_limit=18&_sort=datePosted&q=" + $scope.id).then(function (response) {
                 $scope.sptimkiem = response.data;
                 $scope.sptimkiem.forEach(element => {
                     element.price = $rootScope.formatPrice(element.price);
@@ -80,7 +80,7 @@ myApp.controller('TimKiemCtrl', function ($scope, $http, $rootScope, $routeParam
             });
         }
         if (button === 'banChay') {
-            $http.get("http://localhost:3000/sanpham?_limit=18&_sort=soldCount&_order=desc&danhmuc=" + $scope.danhMuc).then(function (response) {
+            $http.get("http://localhost:3000/sanpham?_limit=18&_sort=soldCount&_order=desc&q=" + $scope.id).then(function (response) {
                 $scope.sptimkiem = response.data;
                 $scope.sptimkiem.forEach(element => {
                     element.price = $rootScope.formatPrice(element.price);
